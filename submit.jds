@@ -10,7 +10,7 @@ should_transfer_files = YES
 when_to_transfer_output = ON_EXIT
 transfer_input_files  = gridpack.tar.gz 
 transfer_output_files  = delphes.root
-transfer_output_remaps = delphes.root delphes_$(Process).root 
+transfer_output_remaps = "delphes.root delphes_$(Process).root"
 
 output = job_$(Process).log
 error = job_$(Process).log
