@@ -1,0 +1,17 @@
+# Job description file for condor job cat_jpsi_ftl_full
+executable = test.sh
+universe   = vanilla
+arguments  = 50000 $(Process)
+log = condor.log
+#Requirements = ( machine != "wn4045.sdfarm.kr")
+
+getenv     = True
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files  = gridpack.tar.gz 
+transfer_output_files  = delphes.root
+transfer_output_remaps = delphes.root delphes_$(Process).root 
+
+output = job_$(Process).log
+error = job_$(Process).log
+queue 1
