@@ -12,7 +12,7 @@ transfer_input_files  = gridpack.tar.gz
 
 
 # xrdcp mode ON.
-transfer_output_files  = madevent/Events/pythia.log
+transfer_output_files  = pythia.log
 transfer_output_remaps = "pythia.log = pythia_$(Process).log"
 #transfer_output_files  = delphes.root
 #transfer_output_remaps = "delphes.root = delphes_$(Process).root"
