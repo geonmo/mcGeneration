@@ -82,6 +82,7 @@ fi
 ../bin/internal/run_pythia ${PYTHIA_PGS} > pythia.log 
 xsec=`cat pythia.log | tail -n 1 | awk {'print $4'}`
 ../bin/internal/run_delphes3 ${DELPHES3} GridRun_$seed tag_1 $xsec  > delphes.log
+echo $HOSTNAME >>  ../../pythia.log
 cp *.log delphes.root ../..
 cd ../..
 
